@@ -5,12 +5,12 @@ import java.time.ZonedDateTime;
 
 public class Order {
   private List<Dish> dishes;
-  private Worker waiter;
+  private Employee waiter;
   private ZonedDateTime datetime;
   private OrderStatus status;
   private Client client;
 
-  public Order(List<Dish> dishes, Worker waiter, Client client) {
+  public Order(List<Dish> dishes, Employee waiter, Client client) {
     this.dishes = dishes;
     this.waiter = waiter;
     this.client = client;

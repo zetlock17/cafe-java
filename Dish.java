@@ -3,7 +3,7 @@ package Cafe;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Dish {
+public class Dish implements Discountable {
   private String title;
   private String description;
   private double price;
@@ -36,5 +36,16 @@ public class Dish {
   @Override
   public String toString() {
     return title + " (" + price + " руб.)";
+  }
+
+  @Override
+  public double getDiscountedPrice(double discountRate) {
+    if (discountRate < 0) {
+        discountRate = 0;
+    }
+    if (discountRate > 1) {
+        discountRate = 1;
+    }
+    return price * (1 - discountRate);
   }
 }

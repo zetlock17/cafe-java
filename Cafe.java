@@ -6,7 +6,7 @@ import java.util.List;
 public class Cafe {
   private Kitchen kitchen;
   private Menu menu;
-  private List<Worker> workers;
+  private List<Employee> workers;
   private List<Client> clients;
   private int maxCapacity;
   private boolean open;
@@ -30,7 +30,7 @@ public class Cafe {
     System.out.println("Кафе закрыто.");
   }
   
-  public void addWorker(Worker worker) {
+  public void addWorker(Employee worker) {
       workers.add(worker);
   }
 
@@ -56,7 +56,7 @@ public class Cafe {
       return kitchen;
   }
 
-  public List<Worker> getWorkers() {
+  public List<Employee> getWorkers() {
       return workers;
   }
 }

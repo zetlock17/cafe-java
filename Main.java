@@ -10,7 +10,7 @@ public class Main {
     Cafe cafe = new Cafe(10);
     cafe.openCafe();
 
-    Worker waiter = new Worker("Анна", "Официант");
+    Waiter waiter = new Waiter("Анна", 20000.0);
     cafe.addWorker(waiter);
 
     Menu menu = cafe.getMenu();
