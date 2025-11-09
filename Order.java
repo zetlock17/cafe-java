@@ -1,12 +1,10 @@
 package Cafe;
 
 import java.util.List;
-import java.time.ZonedDateTime;
 
 public class Order {
   private List<Dish> dishes;
   private Employee waiter;
-  private ZonedDateTime datetime;
   private OrderStatus status;
   private Client client;
 
@@ -14,7 +12,6 @@ public class Order {
     this.dishes = dishes;
     this.waiter = waiter;
     this.client = client;
-    this.datetime = ZonedDateTime.now();
     this.status = OrderStatus.CREATED;
   }
 

@@ -1,14 +1,10 @@
 package Cafe;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Dish implements Discountable {
   private String title;
   private String description;
   private double price;
   private int weight;
-  private List<Product> products = new ArrayList<>();
   private DishType type;
   private int caloricContent;
 
@@ -19,10 +15,6 @@ public class Dish implements Discountable {
     this.weight = weight;
     this.type = type;
     this.caloricContent = caloricContent;
-  }
-
-  public void addProduct(Product product) {
-    this.products.add(product);
   }
 
   public String getTitle() {

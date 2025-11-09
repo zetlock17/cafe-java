@@ -10,8 +10,12 @@ public class Main {
     Cafe cafe = new Cafe(10);
     cafe.openCafe();
 
-    Waiter waiter = new Waiter("Анна", 20000.0);
+    Waiter waiter = new Waiter("Нами", 20000.0);
     cafe.addWorker(waiter);
+
+    Chef chef = new Chef("Санджи", "Шеф-повар", 30000.0);
+    cafe.addWorker(chef);
+    cafe.getKitchen().addChef(chef);
 
     Menu menu = cafe.getMenu();
     Dish soup = new Dish("Суп", "Вкусный супчик", 250.0, 300, DishType.MAIN, 200);
@@ -74,5 +78,11 @@ public class Main {
     cafe.clientLeft(client);
     
     cafe.closeCafe();
+
+    System.out.println("\n--- Расчёт зарплат ---");
+    for (Employee worker : cafe.getWorkers()) {
+        double salary = worker.calculateSalary();
+        System.out.println(worker.getName() + " (" + worker.getPosition() + ") получил зарплату: " + salary + " руб.");
+    }
   }
 }
